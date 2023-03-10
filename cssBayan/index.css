@@ -1,36 +1,43 @@
 * {
     box-sizing: border-box;
 }
+
 body {
     max-width: 40vw;
     margin: 1vw auto;
-    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     font-weight: 500;
-background: #8cdec15e;
+    background: #8cdec15e;
+    /* padding: 1rem; */
 }
 
 
 h1 {
-font-size: 5rem;
-color: rgb(102, 216, 216);
+    font-size: 5rem;
+    color: rgb(8, 88, 88);
+    border-bottom: 0.2rem solid #8cdec15e;
+    margin: 0;
 }
 
 
- .mems__container {
+.mems__container {
     cursor: pointer;
+   
 }
+
 .mem__container {
     display: flex;
     flex-direction: column;
     /* max-width: 100%; */
     cursor: pointer;
+    border-bottom: 0.2rem solid #8cdec15e;
 }
 
 .mem__title {
-font-size: 2rem;
-display: block;
-cursor: pointer;
-padding: 1% 0;
+    font-size: 2rem;
+    display: block;
+    cursor: pointer;
+    padding: 3% 0;
 }
 
 /* .mem__title:hover + .img-mem{
@@ -42,13 +49,14 @@ padding: 1% 0;
     width: 0;
     appearance: none;
     -webkit-appearance: none;
-} 
+}
 
-.mem__input:checked + .img-mem {
+.mem__input:checked+.img-mem {
     display: block;
 }
 
 .img-mem {
     width: 30vw;
-    /* display: none; */
+    display: none;
+    margin: 0 auto;
 }
