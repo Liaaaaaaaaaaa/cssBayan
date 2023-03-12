@@ -8,9 +8,8 @@ body {
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     font-weight: 500;
     background: #8cdec15e;
-    /* padding: 1rem; */
-   /* overflow-y: hidden; */
-} 
+    transition: .7s;
+}
 
 
 
@@ -23,17 +22,29 @@ h1 {
 
 
 .mems__container {
-    /* max-width: 70%; */
+    max-width: 100%;
     cursor: pointer;
-    transition: all .2s ease-out;
 }
 
 .mem__container {
     display: flex;
     flex-direction: column;
-    /* max-width: 100%; */
+    max-width: 100%;
     cursor: pointer;
     border-bottom: 0.2rem solid #8cdec15e;
+    height: 100%;
+    overflow: hidden;
+    /* transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    -webkit-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out; */
+}
+
+.mem__label {
+    font-size: 2rem;
+    display: flex;
+    flex-direction: column;
+    cursor: pointer;
     transition: all .2s ease-out;
 }
 
@@ -49,6 +60,15 @@ h1 {
 
 p {
     margin: 0;
+    padding: 0 1rem;
+}
+
+.mem__input {
+    height: 0;
+    width: 0;
+    appearance: none;
+    -webkit-appearance: none;
+    transition: .7s;
 }
 
 .img-button {
@@ -61,17 +81,10 @@ p {
     /* display: none; */
     display: block;
     visibility: hidden;
-   border: none;
+    border: none;
 }
 
 
-.mem__input {
-    height: 0;
-    width: 0;
-    appearance: none;
-    -webkit-appearance: none;
-    transition: .2s ;
-}
 
 /* .img__container {
    
@@ -80,23 +93,47 @@ p {
     width: 100%;
     display: none;
     padding: 2rem 20%;
+    transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    -webkit-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
 }
 
 /* -----------Active---accordion-------------/*/
 
-.mem__input:checked~.img-mem {
+ .mem__input:checked ~ label .img-mem {
     display: block;
-    transition: all .2s ease-out;
+    transition: .7s;
 }
 
-.mem__input:hover ~.img-mem, .img-mem:hover, .mem__container:hover, .mem__input:hover {
-    display: flex;
-    transition: .2s ;
+/*
+.mem__input:hover ~ label .img-mem
+/* .img-mem:hover, .mem__container:hover, .mem__input:hover */
+/* {
+    display: block;
+    transition: .7s;
+} */
+
+/* .mem__input:checked +.mem__container {
+    height: 100%;
+    overflow: visible;
+} */
+
+.mem__container:hover{
+    height: 100%;
+    overflow: visible;
+}
+
+.mem__container:hover label .img-mem {
+    display: block;
 }
 
 
-.mems__container:hover .mem__container label .img-button {
+
+
+.mems__container:hover .mem__container:not(:hover) label .img-button {
     visibility: visible;
+    transition: .7s;
 }
 
 
@@ -107,14 +144,22 @@ p {
 } */
 
 
+.mem__container:hover label .img-button {
+    background: url(./icon/buttonUp.svg);
+    visibility: visible;
+    background-repeat: no-repeat;
+    background-size: 100%;
+
+}
 
 
-.mem__container:hover label .img-button { 
+/* .mem__container:hover label .img-button {
     background: url(./icon/buttonUp.svg);
     background-repeat: no-repeat;
     background-size: 100%;
-    transition: all .2s ease-out; 
-}
+    transition: .7s;
+} */
+
 
 /* .mems__container:hover + .img-button {
    display: block;
