@@ -50,7 +50,7 @@ h1 {
     justify-content: space-between;
     align-items: center;
     cursor: pointer;
-    padding: 3% 0;
+    padding-top: 3%;
     transition: all .2s ease-out;
 }
 
@@ -58,7 +58,7 @@ p {
     margin: 0;
     padding: 0 1rem;
     max-width: 90%;
-    font-size: 3vw;
+    font-size: 2.5vw;
 }
 
 .mem__input {
@@ -87,6 +87,7 @@ p {
 .img__container {
     display: flex;
     justify-content: center;
+    padding: 1rem;
 }
 
 .img-mem {
@@ -102,14 +103,14 @@ p {
 /* -----------Active---accordion-------------/*/
 
 .mem__input:checked~label .img-mem {
-    width: 35rem;
-    height: 30rem;
+    width: 70%;
+    height: 70%;
 }
 
 
 .mem__container:hover label .img-mem {
-    width: 35rem;
-    height: 30rem;
+    width: 70%;
+    height: 70%;
 }
 
 .mem__container:hover {
