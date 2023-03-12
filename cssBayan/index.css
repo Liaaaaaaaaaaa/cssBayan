@@ -3,13 +3,15 @@
 }
 
 body {
-    max-width: 40vw;
+    max-width: 50%;
     margin: 1vw auto;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     font-weight: 500;
     background: #8cdec15e;
     /* padding: 1rem; */
-}
+   /* overflow-y: hidden; */
+} 
+
 
 
 h1 {
@@ -17,11 +19,11 @@ h1 {
     color: rgb(8, 88, 88);
     border-bottom: 0.2rem solid #8cdec15e;
     margin: 0;
-    /* color:  rgb(11, 128, 128) */
 }
 
 
 .mems__container {
+    /* max-width: 70%; */
     cursor: pointer;
     transition: all .2s ease-out;
 }
@@ -57,6 +59,9 @@ p {
     background-repeat: no-repeat;
     background-size: 100%;
     /* display: none; */
+    display: block;
+    visibility: hidden;
+   border: none;
 }
 
 
@@ -65,31 +70,53 @@ p {
     width: 0;
     appearance: none;
     -webkit-appearance: none;
+    transition: .2s ;
 }
 
+/* .img__container {
+   
+} */
 .img-mem {
-    width: 30vw;
+    width: 100%;
     display: none;
-    margin: 2rem auto;
+    padding: 2rem 20%;
 }
 
-.mem__input:checked + .img-mem {
+/* -----------Active---accordion-------------/*/
+
+.mem__input:checked~.img-mem {
     display: block;
     transition: all .2s ease-out;
 }
 
-.mem__input:hover + .img-mem {
-    display: block;
-    transition: all .2s ease-out;
+.mem__input:hover ~.img-mem, .img-mem:hover, .mem__container:hover, .mem__input:hover {
+    display: flex;
+    transition: .2s ;
 }
 
-.mem__input:hover + .img-button {
-    display: block;
-    /* background: url(./icon/buttonUp.svg); */
-    transition: all .2s ease-out;
+
+.mems__container:hover .mem__container label .img-button {
+    visibility: visible;
 }
 
-/* .mem__input:hover + .img-button {
+
+
+/* .mem__container:hover label .img-mem {
+    display: block;
+    transition: all .2s ease-out;
+} */
+
+
+
+
+.mem__container:hover label .img-button { 
+    background: url(./icon/buttonUp.svg);
+    background-repeat: no-repeat;
+    background-size: 100%;
+    transition: all .2s ease-out; 
+}
+
+/* .mems__container:hover + .img-button {
    display: block;
    transition: all .2s ease-out;
 } */
