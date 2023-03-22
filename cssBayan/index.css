@@ -102,32 +102,43 @@ p {
 
 /* -----------Active---accordion-------------/*/
 
+
 .mem__input:checked~label .img-mem {
     width: 70%;
     height: 70%;
 }
 
+@media (hover: hover) {
+    .mems__container:hover label div p {
+        color: #000000;
+    }
 
-.mem__container:hover label .img-mem {
-    width: 70%;
-    height: 70%;
+    .mem__container:hover label .img-mem {
+        width: 70%;
+        height: 70%;
+    }
+
+    .mem__container:hover {
+        height: 100%;
+        overflow: visible;
+    }
+
+    .mems__container:hover .mem__container:hover label .mem__title .img-button {
+        background: url(./icon/buttonUp.svg);
+        background-repeat: no-repeat;
+        background-size: 100%;
+
+    }
+
+    .mems__container:hover .mem__container label .mem__title .img-button {
+        visibility: visible;
+    }
+
 }
 
-.mem__container:hover {
-    height: 100%;
-    overflow: visible;
-}
 
-.mems__container:hover .mem__container:hover label .mem__title .img-button {
-    background: url(./icon/buttonUp.svg);
-    background-repeat: no-repeat;
-    background-size: 100%;
 
-}
 
-.mems__container:hover .mem__container label .mem__title .img-button {
-    visibility: visible;
-}
 
 /*------------Media ---screen ---------------------*/
 
@@ -152,3 +163,13 @@ p {
         font-size: 1.5rem;
     }
 }
+
+.mem__input:checked+label div p {
+    color: #000000;
+}
+.mem__input:active+label div p,
+p {
+    color: rgb(11, 128, 128);
+}
+
+
